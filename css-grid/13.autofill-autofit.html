@@ -1,0 +1,48 @@
+<!-- Properties Used: 1.auto-fill
+				2.auto-fit-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: #eee;
+			width: 600px;
+			/*width: 80%;*/ /*Use in minmax for responsive*/
+			margin: 50px auto 0;
+
+			display: grid;
+			/*grid-template-columns: repeat(auto-fill,100px);*/ /*Here extra 2 places because width is 600px and 200px width is there which can be fill up.*/
+			/*grid-template-columns: repeat(auto-fit,100px);*/ /*Here no extra places{use inspect for understanding}*/
+			grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+			grid-template-rows: repeat(2,100px);
+		}
+		.items1 {
+			background-color: orangered;
+		}
+		.items2 {
+			background-color: yellowgreen;
+		}
+		.items3 {
+			background-color: slateblue;
+		}
+		.items4 {
+			background-color: hotpink;
+			grid-column-end: -1; /*It works only with auto-fill.*/
+		}
+	</style>
+</head>
+<body>
+	<h1>First Grid Ex</h1>
+
+	<div class="container">
+		<div class="items1">Item 1</div>
+		<div class="items2">Item 2</div>
+		<div class="items3">Item 3</div>
+		<div class="items4">Item 4</div>
+	</div>
+</body>
+</html>

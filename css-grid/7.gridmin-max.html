@@ -1,0 +1,72 @@
+<!-- Properties Used: 1.max-content
+				2.min-content
+				3.minmax()-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: wheat;
+			width: 700px;
+			margin: 45px auto 0;
+
+			display: grid;
+			/*grid-template-columns: max-content 1fr 1fr 1fr;*/ /*I've converted my 1st  												col into max content.It'll set 													acc to data*/
+			grid-template-columns: max-content 1fr 1fr min-content; /*min-content applied*/
+		/*	grid-template-rows: repeat(2,150px);*/
+		/*grid-template-rows: repeat(2,min-content);*/ /*To avoid overflow, make it min-content.*/
+		grid-template-rows:repeat(2,minmax(150px,min-content)); /*If you want to increase 			the height of the row acc content,then we'll use minmax function. min-height: height 150px, and maxm acc to conntent*/
+			grid-gap: 5px;
+		}
+		.items1 {
+			background-color: orangered;
+		}
+		.items2 {
+			background-color: yellowgreen;
+		}
+		.items3 {
+			background-color: slateblue;
+		}
+		.items4 {
+			background-color: hotpink;
+		}
+		.items5 {
+			background-color: royalblue;
+		}
+		.items6 {
+			background-color: goldenrod;
+		}
+		.items7 {
+			background-color: peru;
+		}
+		.items8 {
+			background-color: lime;
+		}
+	</style>
+</head>
+<body>
+	<h1>First Grid Ex</h1>
+
+	<div class="container">
+		<div class="items1">I am a final year student.</div> <!-- max-content -->
+		<div class="items2">Two</div>
+		<div class="items3">Three</div>
+		<!-- <div class="items4">I am a final year student at UtkalUniversity.</div> --> <!-- In min-content height will be adjusted by the longest word -->
+		<div class="items4">I am a final year student at UtkalUniversity.I am a final year student at UtkalUniversity.I am a final year student at UtkalUniversity.</div> <!-- Content overflow -->
+		<div class="items5">Five</div>
+		<div class="items6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="items7">Seven</div>
+		<div class="items8">Eight</div>
+	</div>
+</body>
+</html>

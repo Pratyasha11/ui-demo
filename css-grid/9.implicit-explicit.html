@@ -1,0 +1,72 @@
+<!-- Here One, Two, Three and Four are explicit grid, because we've defined them. The rests are implicit grids. Where explicit grid ends, there will be a dark line and for implicit grid there will be a dotted line. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: white;
+			width: 650px;
+			margin: 45px auto 0;
+
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 120px);
+			grid-gap: 15px;
+
+			grid-auto-rows: 80px;
+			grid-auto-flow: column; /*In case we want to add the grids columnwise, we have to use this. Bydefault it is row wise.*/
+
+			grid-auto-columns: .5fr; /*If we want to give height to implicit columns*/
+		}
+		.items1 {
+			background-color: orangered;
+		}
+		.items2 {
+			background-color: yellowgreen;
+		}
+		.items3 {
+			background-color: slateblue;
+		}
+		.items4 {
+			background-color: hotpink;
+		}
+		.items5 {
+			background-color: royalblue;
+		}
+		.items6 {
+			background-color: goldenrod;
+		}
+		.items7 {
+			background-color: peru;
+		}
+		.items8 {
+			background-color: lime;
+		}
+/*Here we add two more grids, then the height will be adjusted to 80px.*/
+		.items9 {					
+			background-color: red;
+		}
+		.items10 {
+			background-color: mediumpurple;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="items1">One</div> 
+		<div class="items2">Two</div>
+		<div class="items3">Three</div>
+		<div class="items4">Four</div> 
+		<div class="items5">Five</div>
+		<div class="items6">Six</div>
+		<div class="items7">Seven</div>
+		<div class="items8">Eight</div>
+		<div class="items9">Nine</div>
+		<div class="items10">Ten</div>
+	</div>
+</body>
+</html>

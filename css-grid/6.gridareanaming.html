@@ -1,0 +1,76 @@
+<!-- This naming is good for small and same type of project not for complex projects. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: #eee;
+			width: 720px;
+			margin: 45px auto 0;
+
+			display: grid;
+			grid-template-columns: repeat(3,1fr); 
+			grid-template-rows: 120px 60px 100px 400px 50px;
+			grid-gap: 15px;
+
+			/*grid-template-areas: "header header header"
+								"menu menu menu"
+								"box1 box2 sidebar"
+								"content content sidebar"
+								"footer footer footer"*/
+/*If you want to keep the 3rd column of header blank, you can use "."*/
+			grid-template-areas: "header header ." 
+								"menu menu menu"
+								"box1 box2 sidebar"
+								"content content sidebar"
+								"footer footer footer"
+		}
+		.header {
+			background-color: orangered;
+			grid-area: header;
+		}
+		.menu {
+			background-color: yellowgreen;
+			grid-area: menu;
+		}
+		.box1 {
+			background-color: slateblue;
+			grid-area: box1;
+		}
+		.box2 {
+			background-color: hotpink;
+			grid-area: box2;
+		}
+		.sidebar {
+			background-color: royalblue;
+			grid-area: sidebar;
+		}
+		.content {
+			background-color: goldenrod;
+			grid-area: content;
+		}
+		.footer {
+			background-color: cyan;
+			grid-area: footer;
+		}
+	</style>
+</head>
+<body>
+	<h1>SIMPLE PROJECT USING GRID</h1>
+
+	<div class="container">
+		<div class="header">HEADER</div>
+		<div class="menu">MENU</div>
+		<div class="box1">BOX1</div>
+		<div class="box2">BOX2</div>
+		<div class="sidebar">SIDEBAR</div>
+		<div class="content">CONTENT</div>
+		<div class="footer">FOOTER</div>
+	</div>
+</body>
+</html>

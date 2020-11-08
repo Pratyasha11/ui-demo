@@ -1,0 +1,53 @@
+<!-- Ordering is useful, if you want to open a website in mobile and want to show acc to your requirement. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: #eee;
+			width: 650px;
+			margin: 50px auto 0;
+
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			grid-template-rows: repeat(2,150px);
+			
+		}
+		.items1 {
+			background-color: orangered; order:2; /*It will show in last, you can use 1, 2,3...it will still displays in last*/
+			/*background-color: orangered; order:0;*/ /*Default valu is 0*/
+		} 
+		.items2 {
+			background-color: yellowgreen; order:4;
+		}
+		.items3 {
+			background-color: slateblue; order:1;
+		}
+		.items4 {
+			background-color: hotpink; order:6;
+		}
+		.items5 {
+			background-color: royalblue; order:5;
+		}
+		.items6 {
+			background-color: goldenrod; order:3;
+		}
+	</style>
+</head>
+<body>
+	<h1>First Grid Ex</h1>
+
+	<div class="container">
+		<div class="items1">Item 1</div>
+		<div class="items2">Item 2</div>
+		<div class="items3">Item 3</div>
+		<div class="items4">Item 4</div>
+		<div class="items5">Item 5</div>
+		<div class="items6">Item 6</div>
+	</div>
+</body>
+</html>

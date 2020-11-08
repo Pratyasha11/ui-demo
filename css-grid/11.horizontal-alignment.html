@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: white;
+			width: 650px;
+			margin: 45px auto 0;
+
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 120px);
+			grid-gap: 15px;
+			grid-auto-rows: 70px;
+
+			align-items: center;
+			justify-items:start;
+			/*justify-items:center;*/
+			/*justify-items:end;*/
+			/*justify-items:stretch;*/
+			
+		}
+		.items1 {
+			background-color: orangered;
+		}
+		.items2 {
+			background-color: yellowgreen;
+			align-self: center;
+			justify-self:end;
+		}
+		.items3 {
+			background-color: slateblue;
+			grid-row: span 3;
+		}
+		.items4 {
+			background-color: hotpink;
+		}
+		.items5 {
+			background-color: royalblue;
+		}
+		.items6 {
+			background-color: goldenrod;
+		}
+		.items7 {
+			background-color: peru;
+			grid-column: span 2;
+			justify-self:center;
+		}
+		.items8 {
+			background-color: lime;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="items1">One</div> 
+		<div class="items2">Two</div>
+		<div class="items3">Three</div>
+		<div class="items4">Four</div> 
+		<div class="items5">Five</div>
+		<div class="items6">Six</div>
+		<div class="items7">Seven</div>
+		<div class="items8">Eight</div>
+	</div>
+</body>
+</html>

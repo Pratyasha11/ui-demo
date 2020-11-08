@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: wheat;
+			width: 80%;
+			margin: 45px auto 0;
+
+			display: grid;
+			grid-template-columns: minmax(150px,300px) 1fr 1fr min-content;
+			grid-template-rows: repeat(2,minmax(150px, min-content));
+			grid-gap: 5px;
+		}
+		.items1 {
+			background-color: orangered;
+		}
+		.items2 {
+			background-color: yellowgreen;
+		}
+		.items3 {
+			background-color: slateblue;
+		}
+		.items4 {
+			background-color: hotpink;
+		}
+		.items5 {
+			background-color: royalblue;
+		}
+		.items6 {
+			background-color: goldenrod;
+		}
+		.items7 {
+			background-color: peru;
+		}
+		.items8 {
+			background-color: lime;
+		}
+	</style>
+</head>
+<body>
+	<h1>First Grid Ex</h1>
+
+	<div class="container">
+		<div class="items1">I am a final year student at UtkalUniversity.I am a final year student at UtkalUniversity.</div> 
+		<div class="items2">Two</div>
+		<div class="items3">Three</div>
+		<div class="items4">Four</div> 
+		<div class="items5">Five</div>
+		<div class="items6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="items7">Seven</div>
+		<div class="items8">Eight</div>
+	</div>
+</body>
+</html>

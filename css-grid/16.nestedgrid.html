@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS GRID</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: #eee;
+			width: 500px;
+			height: 200px;
+			margin: 50px 0 0 50px;
+
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			grid-template-rows: repeat(2,1fr);
+			grid-gap: 5px;
+		}
+		.items1 {
+			background-color: orangered;
+		}
+		.items2 {
+			background-color: yellowgreen;
+		}
+		.items3 {
+			background-color: slateblue;
+			display: grid;
+			
+			grid-gap: 5px;
+			grid-template-columns: 1fr 1fr;
+		}
+		.items3 > div {
+					background-color: white;
+					color: red;
+					padding: 10px;
+		}
+		.items4 {
+			background-color: hotpink;
+		}
+	</style>
+</head>
+<body>
+	<h1>First Grid Ex</h1>
+
+	<div class="container">
+		<div class="items1">Item 1</div>
+		<div class="items2">Item 2</div>
+		<div class="items3">
+			<div class="subitems1">A</div>
+			<div class="subitems2">B</div>
+			<div class="subitems3">C</div>
+		</div>
+		<div class="items4">Item 4</div>
+	</div>
+</body>
+</html>
