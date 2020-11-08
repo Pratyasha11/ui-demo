@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Tag Example</title>
+	<style>
+		data:hover::after{
+			content: '(X Value' attr(x) ')';
+			font-size: 10px;
+		}
+	</style>
+</head>
+<body>
+		<p>Course Details</p>
+		<ul>
+			<li> <data x="100"> HTML</data></li>
+			<li> <data x="200">CSS</data></li>
+			<li> <data x="300"> JAVASCRIPT</data></li>
+		</ul>
+
+</body>
+</html>
+<hr>
+<html>
+<head>
+	<title>Data Tag Example</title>
+	<style>
+		data:hover::before{
+			content: '(X Value' attr(x) ')';
+			font-size: 10px;
+		}
+	</style>
+</head>
+<body>
+		<p>Course Details</p>
+		<ul>
+			<li> <data x="100"> HTML</data></li>
+			<li> <data x="200">CSS</data></li>
+			<li> <data x="300"> JAVASCRIPT</data></li>
+		</ul>
+
+</body>
+</html>

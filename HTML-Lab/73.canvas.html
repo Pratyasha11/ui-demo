@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Canvas Example</title>
+ </head>
+ <body>
+
+ 	<canvas width="400" height="200" style="border: 2px solid red;" id="a"></canvas>
+ 	<script>
+ 		var c = document.getElementById("a");
+ 		var ctx = c.getContext("2d");
+ 		ctx.strokeStyle="red";
+ 		ctx.arc(150,100,50,0,Math.PI*2); // Here 150 is x , 100 is y ,  50 is radius  , 0 is start position , 3.14*2 is end position 
+ 		
+ 		ctx.stroke();
+ 		ctx.fillStyle="green";
+ 		ctx.fill();
+
+ 	</script>
+ 	<hr>
+ 	<canvas width="400" height="200" style="border: 2px solid red;" id="b"></canvas>
+ 	<script>
+ 		var c = document.getElementById("b");
+ 		var ctx = c.getContext("2d");
+ 		ctx.strokeStyle="red";
+ 		ctx.arc(150,100,50,0,Math.PI*1); // Here 150 is x , 100 is y ,  50 is radius  , 0 is start position , 3.14*2 is end position 
+ 		
+ 		ctx.stroke();
+ 		ctx.fillStyle="green";
+ 		ctx.fill();
+
+ 	</script>
+
+ </body>
+ </html>

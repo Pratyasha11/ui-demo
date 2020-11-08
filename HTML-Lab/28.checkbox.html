@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I Agree</title>
+	<style>
+		label {
+			color: blue;
+		}
+	</style>
+	<script>
+		function show() {
+			if (document.getElementById("chk").checked == true)
+			document.getElementById("b1").disabled=false;
+		else
+			document.getElementById("b1").disabled=true;
+		}
+	</script>
+</head>
+<body>
+	<form action="">
+		<pre>
+			
+			<label> Email : </label>   Email : <input type="text" name="email">
+
+			<label> Password : </label>	Password : <input type="Password" name="Password">
+
+			<a href="#"> I Agree  </a>  <input type="checkbox" id="chk" onclick="show()">
+
+			<input type="button" value="Register" disabled id="b1">
+		</pre>
+		
+
+	</form>
+</body>
+</html>

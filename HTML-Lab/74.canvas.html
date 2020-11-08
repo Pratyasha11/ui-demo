@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Canvas Example</title>
+ </head>
+ <body>
+
+ 	<canvas width="400" height="200" style="border: 2px solid red;" id="a"></canvas>
+ 	<script>
+ 		var c = document.getElementById("a");
+ 		var ctx = c.getContext("2d");
+ 		ctx.strokeStyle="red";
+ 		ctx.arc(150,100,50,0,Math.PI*2); 
+ 		ctx.stroke();
+
+ 		//	Gradient start point x = 0 , y = 0 
+ 		//	Gradient end point x = 200 , y = 0 
+ 		var gradient=ctx.createLinearGradient(100,0,200,0);
+
+ 		gradient.addColorStop(0,'green');
+		gradient.addColorStop(.3,'cyan');
+ 		gradient.addColorStop(.6,'red');
+ 		gradient.addColorStop(1,'green');
+ 		ctx.fillStyle=gradient;
+ 		ctx.fill();
+
+ 	</script>
+
+ </body>
+ </html>

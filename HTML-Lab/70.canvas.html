@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Canvas Example</title>
+ </head>
+ <body>
+
+ 	<canvas width="400" height="200" style="border: 2px solid red;" id="a"></canvas>
+ 	<script>
+ 		var c = document.getElementById("a");
+ 		var ctx = c.getContext("2d");
+ 		ctx.moveTo(00,00);
+ 		ctx.lineTo(400,200);
+ 		ctx.stroke();
+
+ 	</script>
+ 	<hr>
+ 	<canvas width="400" height="200" style="border: 2px solid red;" id="b"></canvas>
+ 	<script>
+ 		var c = document.getElementById("b");
+ 		var ctx = c.getContext("2d");
+ 		ctx.moveTo(00,00);
+ 		ctx.lineTo(400,200);
+ 		ctx.stroke();
+
+ 	</script>
+
+ </body>
+ </html>
