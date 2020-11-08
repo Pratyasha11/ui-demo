@@ -1,0 +1,55 @@
+<!-- Properties Used: Vertical Allignment- 1. Flex-start 2. flex-end 3. center 4. stretch (default) 5. baseline 7. auto-->
+<!-- Properties Used: Vertical Allignment- 1. Flex-start 2. flex-end 3. center 4. stretch (default) 5. baseline -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS FLEX DIRECTION</title>
+	<style>
+		body {
+		font-family: arial,helvetica;
+		}
+		.container {
+			background-color: #eee;
+			margin: 50px;
+			padding: 10px;
+			border: 3px solid #000;
+			height: 400px;
+
+			display: flex;
+			align-items: flex-start;
+			
+		}
+		.item1 {
+			background-color: orangered; 
+			/*align-self: flex-end;*/
+			align-self: auto; /*It will be implemented acc to parent value i.e align-items*/
+		}
+		.item2 {
+			background-color: yellowgreen; }
+		.item3 {
+			background-color: slateblue;
+		}
+		.item4 {
+			background-color: hotpink;
+		}
+		.items {
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			padding: 10px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>First Grid Ex</h1>
+
+	<div class="container">
+		<div class="items item1">One</div>
+		<div class="items item2">Two</div>
+		<div class="items item3">Three</div>
+		<div class="items item4">four</div>
+	</div>
+</body>
+</html>
